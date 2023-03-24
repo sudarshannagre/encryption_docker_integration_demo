@@ -1,0 +1,43 @@
+Spring boot + Bouncy Castle encryption + Docker integration
+
+For more help : https://www.bouncycastle.org/
+				https://gist.github.com/notsocomplex/6e58d1ed2f94b5b8b622
+
+Need to add Following Jar file
+
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcpkix-jdk15to18</artifactId>
+		    <version>1.69</version>
+		</dependency>
+
+----- For Docker ----
+
+Steps : 
+1. Download and install the docker in your local machine
+2. Need to add Dockerfile in the project.
+3. Write Dockerfile
+
+Some useful Docker commands :
+Open the cmd and hit following commands-
+
+To shows the docker version
+>docker -v
+
+To show all the docker images present in machine 
+>docker images 
+
+To Build Docker Image at local
+>docker build -t [dockerImageName] .
+
+To run the project in docker
+>docker run -p [newPort if]:[tomcatdefaultPort] [imageId] 
+
+To save the docker image as .tar file
+>docker save imageName -o newImageName.tar
+
+Create tag name
+>docker tag img_name tagName/dockerImangeName
+
+Push to docker hub
+>docker push dockerId/tag:imageName
